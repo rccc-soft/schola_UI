@@ -62,7 +62,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="852dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/edittexy_background"
+        android:background="@drawable/editmessage_background"
         android:ems="13"
         android:inputType="text"
         android:text="　　メッセージを入力"
