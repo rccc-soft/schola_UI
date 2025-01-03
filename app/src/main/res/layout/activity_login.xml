@@ -37,13 +37,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
             android:fontFamily="sans-serif"
-            android:text="ユーザ名"
+            android:text="ユーザー名"
             android:textColor="#79747E"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -63,7 +63,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editTextPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -72,7 +72,7 @@
             android:textColor="#79747E" />
 
         <Button
-            android:id="@+id/button_login"
+            android:id="@+id/loginButton"
             android:layout_width="130dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -84,7 +84,7 @@
         <!--            android:backgroundTint="#AC9ED2"-->
 
         <Button
-            android:id="@+id/button_sinkikaiintouroku"
+            android:id="@+id/signUpButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="245dp"
@@ -109,7 +109,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_haisougyousya"
+            android:id="@+id/deliveryButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
