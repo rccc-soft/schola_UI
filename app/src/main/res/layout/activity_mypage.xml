@@ -257,7 +257,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:layout_margin="8dp"
-            app:srcCompat="@drawable/noticebutton" />
+            app:srcCompat="@drawable/search_button" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -283,13 +283,6 @@
             android:layout_margin="8dp"
             app:srcCompat="@drawable/mypage_button" />
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:layout_margin="8dp"
-            app:srcCompat="@drawable/search_button" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
