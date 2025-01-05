@@ -32,7 +32,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextTransferAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -55,7 +55,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/transferButton"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -71,7 +71,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/backButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
@@ -81,7 +81,7 @@
             app:srcCompat="@drawable/backbutton" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/noticeButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="290dp"
