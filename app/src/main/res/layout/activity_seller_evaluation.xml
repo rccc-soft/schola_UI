@@ -11,7 +11,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
@@ -21,48 +20,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="620dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/logo" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_marginTop="-9dp"
+                app:srcCompat="@drawable/topbarlogo" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="320dp"
-            android:layout_marginBottom="620dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        </LinearLayout>
 
-            <ImageView
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/back" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:background="#FFFFFF"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/backbutton" />
+
+            <ImageButton
+                android:id="@+id/noticeButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/noticebutton" />
+
+        </LinearLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -80,7 +78,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="289dp"
-                android:layout_marginBottom="550dp"
                 android:text="出品者評価"
                 android:textColor="#705B7C"
                 android:textSize="24sp"
@@ -88,7 +85,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.129"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout5"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
@@ -99,8 +96,9 @@
                 android:text="満足度"
                 android:textColor="#705B7C"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
-                app:layout_constraintStart_toStartOf="@+id/constraintLayout5" />
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout5" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout5"
@@ -122,6 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
+                    android:layout_marginTop="100dp"
                     android:layout_marginEnd="289dp"
                     android:text="☆"
                     android:textColor="#705B7C"
@@ -136,8 +135,9 @@
                     android:layout_height="wrap_content"
                     android:text="☆"
                     android:textColor="#705B7C"
+                    android:textColorLink="#705B7C"
                     android:textSize="60sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/eva1"
                     app:layout_constraintStart_toEndOf="@+id/eva1"
                     app:layout_constraintTop_toTopOf="@+id/eva1" />
 
@@ -147,8 +147,9 @@
                     android:layout_height="wrap_content"
                     android:text="☆"
                     android:textColor="#705B7C"
+                    android:textColorLink="#705B7C"
                     android:textSize="60sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/eva2"
                     app:layout_constraintStart_toEndOf="@+id/eva2"
                     app:layout_constraintTop_toTopOf="@+id/eva2" />
 
@@ -158,8 +159,9 @@
                     android:layout_height="wrap_content"
                     android:text="☆"
                     android:textColor="#705B7C"
+                    android:textColorLink="#705B7C"
                     android:textSize="60sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/eva3"
                     app:layout_constraintStart_toEndOf="@+id/eva3"
                     app:layout_constraintTop_toTopOf="@+id/eva3" />
 
@@ -170,7 +172,7 @@
                     android:text="☆"
                     android:textColor="#705B7C"
                     android:textSize="60sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/eva4"
                     app:layout_constraintStart_toEndOf="@+id/eva4"
                     app:layout_constraintTop_toTopOf="@+id/eva4" />
 
@@ -180,7 +182,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="280dp"
                 android:layout_marginEnd="160dp"
                 android:text="出品者へのメッセージ"
                 android:textColor="#705B7C"
@@ -195,9 +197,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="250dp"
+                android:layout_marginTop="350dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginBottom="150dp"
+                android:layout_marginBottom="130dp"
                 android:background="#FBFBFB"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -210,7 +212,7 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="60dp"
                 android:backgroundTint="#705b7c"
                 android:text="確定"
                 app:layout_constraintEnd_toEndOf="@+id/frameLayout"
