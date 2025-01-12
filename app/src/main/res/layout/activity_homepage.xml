@@ -6,66 +6,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DFD4E0"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="0dp"
+    tools:context=".HomeActivity">
 
+    <!-- トップバーのロゴ -->
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topbarlogo" />
+
+    <!-- お知らせボタン -->
+
+    <!-- 広告カード -->
+    <ImageButton
+        android:id="@+id/noticeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginEnd="10dp"
+        app:layout_constraintMarginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/noticebutton" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/adCard"
+        android:layout_width="400dp"
+        android:layout_height="225dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView10">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="400dp"
+            android:layout_height="225dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ad_sample" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 検索バー -->
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="370dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edittexy_background"
         android:drawableStart="?android:attr/actionModeWebSearchDrawable"
         android:ems="10"
         android:inputType="text"
         android:text=" 検索"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@id/adCard" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="0dp"
-        android:background="#504961"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="S c h o l a"
-            android:textColor="#F6F6F6"
-            android:textSize="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+    <!-- スクロールビュー -->
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/under_bar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+
+        app:layout_constraintTop_toBottomOf="@id/editTextText">
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="8dp">
+            android:layout_margin="8dp"
+            android:orientation="vertical">
 
             <!-- 既存のコンテンツはそのまま保持 -->
 
@@ -195,9 +217,8 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -319,61 +340,85 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
 
+    <!-- 下部のバー -->
+    <ImageView
+        android:id="@+id/under_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/under_bar" />
 
+    <!-- 下部ボタン -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_margin="0dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:background="@drawable/chatunderbar"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView6"
+        <ImageButton
+            android:id="@+id/mypagebtn"
             android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_margin="8dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/home_button"/>
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home_button" />
 
-        <ImageView
-            android:id="@+id/imageView7"
+        <ImageButton
+            android:id="@+id/productsearchbtn"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/search_button" />
 
-        <ImageView
-            android:id="@+id/imageView8"
+        <ImageButton
+            android:id="@+id/exhibitbtn"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/exhibit_button" />
 
-        <ImageView
-            android:id="@+id/imageView9"
+        <ImageButton
+            android:id="@+id/productdetailbtn"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/favorite_button" />
 
-        <ImageView
-            android:id="@+id/imageView10"
+        <ImageButton
+            android:id="@+id/noticeviewbtn"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/mypage_button" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
