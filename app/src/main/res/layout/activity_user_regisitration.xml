@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:text="会員登録"
+                android:text="会員者登録"
                 android:textColor="#6C4C9E"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -65,6 +65,106 @@
 
                 <EditText
                     android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="会員者名"
+                    android:textColor="#6C4C9E"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/kaiinname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="フリガナ"
+                    android:textColor="#6C4C9E"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/hurigana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="生年月日"
+                    android:textColor="#6C4C9E"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="現在通っている学校"
+                    android:textColor="#6C4C9E"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/school"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="例）"
@@ -144,6 +244,31 @@
                     android:layout_height="wrap_content"
                     android:hint="例）"
                     android:inputType="textPassword"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="プロフィールメッセージ"
+                    android:textColor="#6C4C9E"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/profileMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）"
                     android:padding="12dp" />
             </LinearLayout>
 
