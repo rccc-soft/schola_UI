@@ -24,9 +24,9 @@
     <!-- お知らせボタン -->
     <ImageButton
         android:id="@+id/noticeButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="20dp"
         android:background="#FFFFFF"
         android:scaleType="fitXY"
@@ -37,10 +37,10 @@
     <!-- 戻るボタン -->
     <ImageButton
         android:id="@+id/backButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="352dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="345dp"
         android:background="#FFFFFF"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
