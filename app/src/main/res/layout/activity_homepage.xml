@@ -22,22 +22,21 @@
         app:srcCompat="@drawable/topbarlogo" />
 
     <!-- お知らせボタン -->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/noticeButton"-->
+    <!--        android:layout_width="40dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        android:background="#FFFFFF"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintMarginEnd="10dp"-->
+    <!--        app:layout_constraintMarginTop="16dp"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/noticebutton" />-->
 
     <!-- 広告カード -->
-    <ImageButton
-        android:id="@+id/noticeButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:background="#FFFFFF"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginEnd="10dp"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/noticebutton" />
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/adCard"
         android:layout_width="400dp"
@@ -373,8 +372,8 @@
         <ImageButton
             android:id="@+id/mypagebtn"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:scaleType="fitXY"
@@ -383,8 +382,8 @@
         <ImageButton
             android:id="@+id/productsearchbtn"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:scaleType="fitXY"
@@ -393,28 +392,18 @@
         <ImageButton
             android:id="@+id/exhibitbtn"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/exhibit_button" />
 
         <ImageButton
-            android:id="@+id/productdetailbtn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/favorite_button" />
-
-        <ImageButton
             android:id="@+id/noticeviewbtn"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:scaleType="fitXY"
