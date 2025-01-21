@@ -8,56 +8,103 @@
     android:background="#F1F1F1"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@drawable/rounded_rectangle_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="830dp"
+            android:background="@drawable/rounded_rectangle_top_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="-9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/topbarlogo" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="40dp"
-            android:text="配送方法"
-            android:textColor="#79747E"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        <!-- 戻るボタン -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="345dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backbutton" />
 
-        <RadioGroup
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="100dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
-            <RadioButton
-                android:id="@+id/deliverySelectButton"
-                android:layout_width="225dp"
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/buy_background"
-                android:text="配送"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="40dp"
+                android:text="配送方法"
                 android:textColor="#79747E"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/handDeliverySelectButton"
-                android:layout_width="225dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/buy_background"
-                android:text="手渡し"
-                android:textColor="#79747E"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/deliverySelectButton"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/radio_button_selector"
+                    android:button="@null"
+                    android:paddingLeft="30dp"
+                    android:text="配送"
+                    android:textColor="#79747E"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/handDeliverySelectButton"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/radio_button_selector"
+                    android:button="@null"
+                    android:paddingLeft="30dp"
+                    android:text="手渡し"
+                    android:textColor="#79747E"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/textView7"
@@ -100,8 +147,8 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/buy_background"
-                android:text="金額を表示"
                 android:gravity="center_vertical|right"
+                android:text="金額を表示"
                 android:textColor="#79747E"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -128,75 +175,26 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <Spinner
+                android:id="@+id/paymentMethodSpinner"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:popupBackground="#FFFFFF"
+                tools:listitem="@android:layout/simple_spinner_dropdown_item" />
 
-                <RadioButton
-                    android:id="@+id/creditCardSelectButton"
-                    android:layout_width="225dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/buy_background"
-                    android:text="クレジットカード"
-                    android:textColor="#79747E"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/buyButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#79747E"
+                android:text="購入"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/electronicMoneySelectButton"
-                    android:layout_width="225dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/buy_background"
-                    android:text="電子マネー"
-                    android:textColor="#79747E"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/buyButton"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:backgroundTint="#79747E"
-                    android:text="購入"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </RadioGroup>
-
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="11dp"
-            android:background="#FFFFFF"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/backbutton" />
-
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="290dp"
-            android:layout_marginTop="16dp"
-            android:background="#FFFFFF"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/noticebutton" />
-
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

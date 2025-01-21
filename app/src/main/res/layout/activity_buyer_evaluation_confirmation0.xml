@@ -6,132 +6,160 @@
     android:background="#FFF5F8">
 
     <!-- メインコンテンツ -->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@drawable/rounded_rectangle_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="830dp"
+            android:background="@drawable/rounded_rectangle_top_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/topbarlogo" />
 
         <!-- 戻るボタン -->
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/backButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="345dp"
             android:background="#FFFFFF"
-            android:contentDescription="TODO"
             android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/backbutton" />
 
-        <!-- 評価画面タイトル -->
-        <TextView
-            android:id="@+id/evaluationTitle"
+        <EditText
+            android:id="@+id/messageInput"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="評価画面"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center" />
+            android:layout_height="500dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="187dp"
+            android:background="#ffffff"
+            android:gravity="top|start"
+            android:hint="出品者へのメッセージ"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- 評価ボタン -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:id="@+id/evaluationButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center"
-            android:layout_marginTop="32dp"
-            android:weightSum="5">
+            android:orientation="horizontal"
+            android:weightSum="5"
+            app:layout_constraintBottom_toTopOf="@+id/messageInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <!-- 感動ボタン -->
+
             <Button
                 android:id="@+id/veryGoodButton"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:layout_weight="1"
                 android:layout_marginEnd="4dp"
+                android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
                 android:text="感動"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
-            <!-- 良いボタン -->
+
             <Button
                 android:id="@+id/goodButton"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:layout_weight="1"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
+                android:layout_weight="1"
                 android:backgroundTint="#8BC34A"
                 android:text="良い"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
-            <!-- 普通ボタン -->
+
             <Button
                 android:id="@+id/normalButton"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:layout_weight="1"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
+                android:layout_weight="1"
                 android:backgroundTint="#FFC107"
                 android:text="普通"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
-            <!-- 悪いボタン -->
             <Button
                 android:id="@+id/badButton"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:layout_weight="1"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
+                android:layout_weight="1"
                 android:backgroundTint="#FF9800"
                 android:text="悪い"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
-            <!-- 最悪ボタン -->
             <Button
                 android:id="@+id/veryBadButton"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:layout_weight="1"
                 android:layout_marginStart="4dp"
+                android:layout_weight="1"
                 android:backgroundTint="#F44336"
                 android:text="最悪"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- メッセージ入力欄 -->
-        <EditText
-            android:id="@+id/messageInput"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:hint="出品者へのメッセージ"
-            android:background="@drawable/rounded_rectangle_background"
-            android:padding="16dp"
-            android:gravity="top|start"
-            android:layout_marginTop="32dp" />
-
-        <!-- 送信ボタン -->
         <Button
             android:id="@+id/editButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#705B7C"
+            android:layout_marginTop="450dp"
+            android:backgroundTint="#79747E"
             android:text="送信"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/evaluationButtons" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- 半透明背景 -->
     <LinearLayout
@@ -178,7 +206,7 @@
                         android:layout_width="130dp"
                         android:layout_height="50dp"
                         android:layout_marginEnd="8dp"
-                        android:backgroundTint="#CCCCCC"
+                        android:backgroundTint="#79747e"
                         android:text="キャンセル"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp" />
@@ -189,7 +217,7 @@
                         android:layout_width="130dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="8dp"
-                        android:backgroundTint="#4CAF50"
+                        android:backgroundTint="#79747e"
                         android:text="送信"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp" />

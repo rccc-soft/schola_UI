@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE9F2"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_rectangle_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="830dp"
+            android:background="@drawable/rounded_rectangle_top_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/topbarlogo" />
+
+        <!-- 戻るボタン -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="345dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backbutton" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="口座情報入力"
+                android:textColor="#79747E"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="銀行名"
+                    android:textColor="#79747E"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editTextBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）○○銀行"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewBranchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="支店名"
+                    android:textColor="#79747E"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editTextBranchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）○○支店"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewAccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="口座番号"
+                    android:textColor="#79747E"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editTextAccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）1234567"
+                    android:padding="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewAccountName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="口座名義"
+                    android:textColor="#79747E"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editTextAccountName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）ヤマダタロウ"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="電話番号"
+                    android:textColor="#79747E"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="例）00000000000"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/amountInputButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#79747E"
+                android:text="金額入力"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/main"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@drawable/rounded_rectangle_background"-->
+    <!--    android:orientation="vertical"-->
+    <!--    android:padding="0dp"-->
+    <!--    tools:context=".MainActivity">-->
+
+    <!--    &lt;!&ndash; トップバーのロゴ &ndash;&gt;-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView10"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="-9dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/topbarlogo" />-->
+
+    <!--    &lt;!&ndash; お知らせボタン &ndash;&gt;-->
+    <!--    &lt;!&ndash;    <ImageButton&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:id="@+id/noticeButton"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_width="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_marginTop="13dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_marginEnd="20dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:background="#FFFFFF"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:scaleType="fitXY"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:srcCompat="@drawable/noticebutton" />&ndash;&gt;-->
+
+    <!--    &lt;!&ndash; 戻るボタン &ndash;&gt;-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/backButton"-->
+    <!--        android:layout_width="50dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="13dp"-->
+    <!--        android:layout_marginEnd="345dp"-->
+    <!--        android:background="#FFFFFF"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/backbutton" />-->
+
+    <!--    -->
+
+    <!--    &lt;!&ndash; 銀行名 &ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textViewBankName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="52dp"-->
+    <!--        android:layout_marginTop="125dp"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:text="銀行名"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/imageView10" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextBankName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:ems="13"-->
+    <!--        android:hint="例）○○銀行"-->
+    <!--        android:inputType="text"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/textViewBankName" />-->
+
+    <!--    &lt;!&ndash; 支店名 &ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textViewBranchName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="52dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:text="支店名"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/editTextBankName" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextBranchName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="70dp"-->
+    <!--        android:ems="13"-->
+    <!--        android:hint="例）○○支店"-->
+    <!--        android:inputType="text"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textViewBranchName" />-->
+
+    <!--    &lt;!&ndash; 口座番号 &ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textViewAccountNumber"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="52dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:text="口座番号"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/editTextBranchName" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextAccountNumber"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="70dp"-->
+    <!--        android:digits="0123456789"-->
+    <!--        android:ems="13"-->
+    <!--        android:hint="例）1234567"-->
+    <!--        android:inputType="number"-->
+    <!--        android:maxLength="7"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textViewAccountNumber" />-->
+
+    <!--    &lt;!&ndash; 口座名義 &ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textViewAccountName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="52dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:text="口座名義"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/editTextAccountNumber" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextAccountName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:digits="アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンー・"-->
+    <!--        android:ems="13"-->
+    <!--        android:hint="例）ヤマダタロウ"-->
+    <!--        android:inputType="text"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textViewAccountName" />-->
+
+    <!--    &lt;!&ndash; 電話番号 &ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textViewPhone"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="52dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:text="電話番号"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/editTextAccountName" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextPhone"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:digits="0123456789"-->
+    <!--        android:ems="13"-->
+    <!--        android:hint="例）00000000000"-->
+    <!--        android:inputType="number"-->
+    <!--        android:maxLength="11"-->
+    <!--        android:textColor="#79747E"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textViewPhone" />-->
+
+    <!--    &lt;!&ndash; 金額入力ボタン &ndash;&gt;-->
+    <!--    <Button-->
+    <!--        android:id="@+id/amountInputButton"-->
+    <!--        android:layout_width="130dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:backgroundTint="#79747E"-->
+    <!--        android:text="金額入力"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
