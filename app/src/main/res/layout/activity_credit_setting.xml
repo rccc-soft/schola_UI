@@ -94,6 +94,10 @@
                     android:id="@+id/editTextCardNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:autofillHints=""
+                    android:digits="0123456789"
+                    android:maxLength="16"
                     android:padding="12dp" />
             </LinearLayout>
 
@@ -119,6 +123,10 @@
                     android:id="@+id/editTextExpirationDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:autofillHints=""
+                    android:digits="0123456789"
+                    android:maxLength="4"
                     android:padding="12dp" />
             </LinearLayout>
 
@@ -144,6 +152,10 @@
                     android:id="@+id/editTextCVCCVV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:autofillHints=""
+                    android:digits="0123456789"
+                    android:maxLength="4"
                     android:padding="12dp" />
 
             </LinearLayout>
@@ -170,6 +182,8 @@
                     android:id="@+id/editTextName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:padding="12dp" />
             </LinearLayout>
 
