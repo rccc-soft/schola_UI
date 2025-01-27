@@ -189,31 +189,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
-                        android:text="通っている学校"
-                        android:textColor="#79747E"
-                        android:textSize="14sp" />
-
-                    <EditText
-                        android:id="@+id/school"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="例）〇〇学校,〇〇大学"
-                        android:padding="12dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:background="#FFFFFF"
-                    android:elevation="4dp"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
                         android:text="メールアドレス"
                         android:textColor="#79747E"
                         android:textSize="14sp" />
@@ -315,7 +290,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
-                        android:text="必要書類"
+                        android:text="学生証"
                         android:textColor="#79747E"
                         android:textSize="14sp" />
 
