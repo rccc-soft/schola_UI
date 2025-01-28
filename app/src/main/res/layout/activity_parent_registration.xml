@@ -4,201 +4,245 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF4FF"
+    android:background="@drawable/rounded_rectangle_background"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:padding="16dp">
+        android:background="@drawable/rounded_rectangle_background">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="830dp"
+            android:background="@drawable/rounded_rectangle_top_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_marginTop="-9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/topbarlogo" />
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="保護者登録"
-                android:textColor="#6C4C9E"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+        <!-- 戻るボタン -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="345dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backbutton" />
 
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="保護者名"
-                    android:textColor="#6C4C9E"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/parentname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="例）山田昭子"
-                    android:padding="12dp" />
-
-            </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:text="保護者情報登録"
+                    android:textColor="#79747E"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="ふりがな"
-                    android:textColor="#6C4C9E"
-                    android:textSize="14sp" />
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFFFFF"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <EditText
-                    android:id="@+id/parenthurigana"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="保護者名"
+                        android:textColor="#79747E"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/parentname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="例）山田昭子"
+                        android:padding="12dp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="例）やまだあきこ"
-                    android:padding="12dp" />
-            </LinearLayout>
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFFFFF"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="フリガナ"
+                        android:textColor="#79747E"
+                        android:textSize="14sp" />
 
+                    <EditText
+                        android:id="@+id/parenthurigana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="例）ヤマダアキコ"
+                        android:padding="12dp" />
+                </LinearLayout>
 
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="メールアドレス"
-                    android:textColor="#6C4C9E"
-                    android:textSize="14sp" />
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFFFFF"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <EditText
-                    android:id="@+id/parentemail"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="メールアドレス"
+                        android:textColor="#79747E"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/parentemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="例）schola2025@gmail.com"
+                        android:padding="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="例）schola2025@gmail.com"
-                    android:padding="12dp" />
-            </LinearLayout>
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFFFFF"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="電話番号"
+                        android:textColor="#79747E"
+                        android:textSize="14sp" />
 
-                <TextView
+                    <EditText
+                        android:id="@+id/parentphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="例）01200008888"
+                        android:padding="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="電話番号"
-                    android:textColor="#6C4C9E"
-                    android:textSize="14sp" />
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFFFFF"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <EditText
-                    android:id="@+id/parentphone"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="パスワード"
+                        android:textColor="#79747E"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/parentpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="半角英数記号8~16文字"
+                        android:inputType="textPassword"
+                        android:padding="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="例）01200008888"
-                    android:padding="12dp" />
-            </LinearLayout>
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="本人確認書類"
+                        android:textColor="#79747E"
+                        android:textSize="14sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="パスワード"
-                    android:textColor="#6C4C9E"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/parentpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="半角英数記号8~16文字"
-                    android:inputType="textPassword"
-                    android:padding="12dp" />
-            </LinearLayout>
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="本人確認書類"
-                    android:textColor="#6C4C9E"
-                    android:textSize="14sp" />
+                    <Button
+                        android:id="@+id/parentuploadButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#79747E"
+                        android:text="画像をアップロード"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
 
                 <Button
-                    android:id="@+id/parentuploadButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#6C4C9E"
-                    android:text="画像をアップロード"
-                    android:textColor="#FFFFFF" />
+                    android:id="@+id/parentregisterButton"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#79747E"
+                    android:text="登録"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/parentregisterButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#6C4C9E"
-                android:padding="12dp"
-                android:text="登録"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </ScrollView>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
