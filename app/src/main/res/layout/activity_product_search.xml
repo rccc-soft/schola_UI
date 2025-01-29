@@ -79,17 +79,29 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#79747E"
-            android:text="カテゴリ"
+            android:text="検索"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
-
         <Button
             android:id="@+id/categorybtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="80dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#79747E"
+            android:text="カテゴリ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
+
+        <Button
+            android:id="@+id/unibtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="130dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#79747E"
             android:text="大学"
